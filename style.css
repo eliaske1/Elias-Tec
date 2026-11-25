@@ -1,0 +1,441 @@
+:root {
+  --bg: #0b0f19;
+  --surface: #131a2a;
+  --surface-alt: #192236;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --whatsapp: #22c55e;
+  --whatsapp-hover: #16a34a;
+  --border: #243049;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  width: 92%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11, 15, 25, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.9rem 0;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.btn-nav {
+  background: var(--accent);
+  color: #0b0f19 !important;
+  padding: 0.45rem 0.95rem;
+  border-radius: 6px;
+  font-weight: 700 !important;
+}
+
+/* Hero */
+.hero {
+  padding: 3.5rem 0 3rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.14);
+  color: var(--accent);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.hero-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.6rem;
+}
+
+.hero-card h3 {
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.info-list {
+  list-style: none;
+  display: grid;
+  gap: 0.8rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.info-list strong {
+  color: var(--text);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #0b0f19;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-secondary {
+  background: var(--surface-alt);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+}
+
+.btn-whatsapp {
+  background: var(--whatsapp);
+  color: #052e16;
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+
+.btn-whatsapp:hover {
+  background: var(--whatsapp-hover);
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Sections */
+.section {
+  padding: 3.5rem 0;
+}
+
+.alt-bg {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.93rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.feature h4 {
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.feature p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Booking Form */
+.booking-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2.2rem;
+  align-items: start;
+}
+
+.booking-info h2 {
+  margin-bottom: 0.75rem;
+}
+
+.booking-info p {
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+
+.direct-contacts a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.booking-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1.6rem;
+  border-radius: 14px;
+}
+
+.booking-form label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 1.1rem;
+  font-family: inherit;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero-grid,
+  .booking-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Price Table */
+.price-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.price-table th,
+.price-table td {
+  padding: 0.95rem 1.1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.price-table th {
+  color: var(--accent);
+  font-weight: 700;
+  background: rgba(56, 189, 248, 0.06);
+}
+
+.price-table tr:last-child td {
+  border-bottom: none;
+}
+
+.price-table strong {
+  color: var(--whatsapp);
+}
+
+/* FAQ Accordion */
+.faq-list {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1.4rem;
+}
+
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+}
+
+.faq-item summary {
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.faq-item p {
+  margin-top: 0.7rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+/* Floating WhatsApp Button */
+.floating-wa {
+  position: fixed;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  z-index: 200;
+  background: var(--whatsapp);
+  color: #052e16;
+  font-weight: 800;
+  font-size: 0.92rem;
+  padding: 0.75rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.floating-wa:hover {
+  background: var(--whatsapp-hover);
+  transform: translateY(-2px);
+}
